@@ -39,7 +39,7 @@ if (!empty($_POST)){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Guest Book</title>
+    <title>Страница регистрации</title>
     <meta charset="UTF-8">
     <link href="css/style.css" media="screen" rel="stylesheet">
 </head>
@@ -51,8 +51,8 @@ if (!empty($_POST)){
         <li><a href="login.php">Авторизация</a></li>
     </ul>
 </header>
-<div class="body-content">
-    <h1>Страница регистрации</h1>
+<div class="body-content container mlogin">
+    <h1>Регистрация</h1>
     <div>
         <form method="POST">
             <div style="color: red;">
@@ -135,7 +135,7 @@ if (!empty($_POST)){
             </div>
             <div>
                 <br/>
-                <input type="submit" name="submit" id="submit" value="Зарегистрироваться">
+                <input class="button" type="submit" name="submit" id="submit" value="Зарегистрироваться">
             </div>
         </form>
     </div>
