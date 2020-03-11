@@ -31,7 +31,7 @@ if (!empty($_POST)){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Guest Book</title>
+    <title>Авторизация</title>
     <meta charset="UTF-8">
     <link href="css/style.css" media="screen" rel="stylesheet">
 </head>
