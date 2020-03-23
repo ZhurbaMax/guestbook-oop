@@ -1,7 +1,6 @@
 <?php
 require_once("config.php");
 if (!empty($_SESSION['user_id'])) {
-    header("location: /index.php");
 }
 
 $errors = [];
@@ -39,8 +38,12 @@ if (!empty($_POST)){
 <header>
     <ul>
         <li><a href="index.php">Комментарии</a></li>
-        <li><a href="registration.php">Регистрация</a></li>
-        <li><a href="login.php">Авторизация</a></li>
+        <li><a class=" <?php if (!empty($_SESSION['user_id'])) {
+                echo "hidden-menu";
+            } ?>" href="registration.php">Регистрация</a></li>
+        <li><a class=" <?php if (!empty($_SESSION['user_id'])) {
+                echo "hidden-menu";
+            } ?>" href="login.php">Авторизация</a></li>
     </ul>
 </header>
 <div class="body-content container mlogin">

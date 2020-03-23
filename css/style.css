@@ -183,3 +183,4 @@ ul {
 }
 #email {width: 100%;line-height: 25px;font-size: 20px;margin: 6px auto;}
 .select {width: 100%;padding: 6px;margin: 6px auto;}
+.hidden-menu {display: none;}

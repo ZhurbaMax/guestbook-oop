@@ -5,6 +5,7 @@ class Comment extends DB
     public $userId;
     public $comment;
     public $createdAt;
+    public $parentId;
 
     public function save()
     {
@@ -19,7 +20,7 @@ class Comment extends DB
         $stmt->execute();
         $comments = [];
         while ($row = $stmt->fetch(PDO::FETCH_LAZY)) {
-            $comments[] = ['id' => $row->id, 'user_id' => $row->user_id, 'comment' => $row->comment, 'created_at' => $row->created_at, 'username' =>$row->username];
+            $comments[] = ['id' => $row->id, 'user_id' => $row->user_id, 'parent_id' => $row->parent_id, 'comment' => $row->comment, 'created_at' => $row->created_at, 'username' =>$row->username];
         }
         return $comments;
     }

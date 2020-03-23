@@ -28,9 +28,15 @@ $comments = $comment->findAll();
 <body>
 <header>
     <ul>
-        <li><a href="index.php">Комментарии</a></li>
-        <li><a href="registration.php">Регистрация</a></li>
-        <li><a href="login.php">Авторизация</a></li>
+        <li><a class=" <?php if (!empty($_SESSION['user_id'])) {
+                echo "hidden-menu";
+            } ?>" href="index.php">Комментарии</a></li>
+        <li><a class=" <?php if (!empty($_SESSION['user_id'])) {
+                echo "hidden-menu";
+            } ?>" href="registration.php">Регистрация</a></li>
+        <li><a class=" <?php if (!empty($_SESSION['user_id'])) {
+                echo "hidden-menu";
+            } ?>" href="login.php">Авторизация</a></li>
     </ul>
 </header>
 <div id="comments-header">
@@ -59,6 +65,7 @@ $comments = $comment->findAll();
         }?>><span class="comment-date-user"><?php echo $comment['username'];?> </span> <?php echo $comment['comment'];?> <span class="comment-date">(<?php echo $comment['created_at'];?>)
             </span>
         </p>
+
         <!--<form method="POST">
                 <div>
                     <textarea name="comment" class="replay"> </textarea>
@@ -69,7 +76,7 @@ $comments = $comment->findAll();
      </form>-->
         <a href="#comments-form" class="reaply" id="<?php echo $comment['parent_id'];?>">Ответить</a>
 
-    <?php endforeach; ?>
+    <?php endforeach;?>
 </div>
 </body>
 </html>
