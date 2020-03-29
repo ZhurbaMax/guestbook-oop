@@ -24,4 +24,6 @@ class Comment extends DB
         }
         return $comments;
     }
+
+
 }

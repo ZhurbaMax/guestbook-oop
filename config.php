@@ -1,9 +1,9 @@
 <?php
 session_start();
-include_once ("classes/DB.php");
-include_once ("classes/User.php");
-include_once ("classes/Comment.php");
-include_once ("classes/Validator.php");
+include_once ("app/models/DB.php");
+include_once ("app/models/User.php");
+include_once ("app/models/Comment.php");
+include_once ("app/models/Validator.php");
 
 
 

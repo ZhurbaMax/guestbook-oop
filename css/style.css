@@ -160,17 +160,6 @@ header {
     overflow: hidden;
 }
 
-ul {
-
-    text-align: right;
-    list-style: none;
-    display: block;
-    overflow: hidden;
-    position: absolute;
-    right: 10%;
-    width: 400px;
-
-}
 .comment-date-user {
     color: #590404;
     font-weight: bold;
@@ -184,3 +173,93 @@ ul {
 #email {width: 100%;line-height: 25px;font-size: 20px;margin: 6px auto;}
 .select {width: 100%;padding: 6px;margin: 6px auto;}
 .hidden-menu {display: none;}
+
+#comm-form1 {
+    border: #ddd 1px solid;
+    width: 200px;
+    padding: 5px;
+    display: none;
+}
+
+div.comments_wrap{
+    width: 600px;
+    margin: 0 auto;
+}
+
+div.comments_wrap ul
+{
+    list-style-type: none;
+}
+
+div.comments_wrap ul li
+{
+    margin: 7px 0 7px 7px;
+    width: 85%;
+}
+
+div.comments_wrap ul li div.comment
+{
+    border: solid 1px #ccc;
+    padding: 5px 10px;
+}
+
+div.comments_wrap ul li div.author
+{
+    font-weight: bold;
+    margin: 3px 0;
+}
+
+div.comments_wrap ul li div.author span.date
+{
+    padding-left: 20px;
+
+}
+
+div.comments_wrap ul li div.comment_text
+{
+    overflow: auto;
+}
+/*ul {
+
+    text-align: right;
+    list-style: none;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    left: 10%;
+    width: 600px;
+
+}*/
+
+
+.comments_wrap2 {
+    width: 70%;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+div.comments_wrap2 ul li{
+    width: 100%;
+}
+input {
+
+    margin: 13px 5px;
+    background: transparent;
+    border: none;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+
+}
+input:hover {
+
+    color: #f58220;
+
+}
+
+.nav {
+    list-style: none;
+    position: absolute;
+    right: 10%;
+    top: 30px;
+}
