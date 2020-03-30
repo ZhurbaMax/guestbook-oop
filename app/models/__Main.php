@@ -1,9 +1,10 @@
 <?php
 namespace app\models;
-use app\lib\Db;
-use PDO;
+use app\core\Model;
 
-class Comment extends Db
+
+
+class Main extends Model
 {
     public $id;
     public $userId;
@@ -26,10 +27,9 @@ class Comment extends Db
         while ($row = $stmt->fetch(PDO::FETCH_LAZY)) {
             $comments[] = ['id' => $row->id, 'user_id' => $row->user_id, 'parent_id' => $row->parent_id, 'comment' => $row->comment, 'created_at' => $row->created_at, 'username' =>$row->username];
         }
-        //var_dump($comments);
         return $comments;
-
+        echo $comments;
     }
 
-
 }
+

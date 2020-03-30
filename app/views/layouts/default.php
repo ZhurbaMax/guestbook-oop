@@ -23,13 +23,13 @@
 <ul class="nav">
     <li><a class=" <?php if (!empty($_SESSION['user_id'])) {
             echo "hidden-menu";
-        } ?>" href="index.php">Комментарии</a></li>
+        } ?>" href="/">Комментарии</a></li>
     <li><a class=" <?php if (!empty($_SESSION['user_id'])) {
             echo "hidden-menu";
-        } ?>" href="registration.php">Регистрация</a></li>
+        } ?>" href="registration">Регистрация</a></li>
     <li><a class=" <?php if (!empty($_SESSION['user_id'])) {
             echo "hidden-menu";
-        } ?>" href="login.php">Авторизация</a></li>
+        } ?>" href="login">Авторизация</a></li>
 </ul>
         <?php echo $content; ?>
 </body>

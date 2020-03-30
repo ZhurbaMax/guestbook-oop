@@ -1,6 +1,6 @@
 <?php
-require_once("config.php");
-
+//require_once("config.php");
+session_start();
 use app\core\Router;
 
 spl_autoload_register(function ($class) {
@@ -9,7 +9,6 @@ spl_autoload_register(function ($class) {
         require $path;
     }
 });
-session_start();
 
 $router = new Router();
 $router->run();

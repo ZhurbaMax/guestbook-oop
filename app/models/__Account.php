@@ -1,10 +1,9 @@
 <?php
 namespace app\models;
-use app\lib\Db;
-use PDO;
 
+use app\core\Model;
 
-class User extends Db
+class Account extends Model
 {
     public $id;
     public $userName;
@@ -15,14 +14,6 @@ class User extends Db
     public $country;
     public $city;
     public $gender;
-
-    public function save()
-    {
-        $stmt = $this->conn->prepare("INSERT INTO users(username, email, first_name, last_name, country, city, gender, password) VALUES(:username, :email, :first_name, :last_name, :country, :city, :gender, :password)");
-        $stmt->execute(array('username' => $this->userName, 'country' => $this->country, 'city' => $this->city, 'gender' => $this->gender, 'email' => $this->email, 'password' => $this->password, 'first_name' => $this->firstName, 'last_name' => $this->lastName));
-        $this->id = $this->conn->lastInsertId();
-        return $this->id;
-    }
 
     public function find($id)
     {
@@ -43,7 +34,6 @@ class User extends Db
     }
     public function checkLogin($userName, $password)
     {
-        //var_dump($userName, $password);die();
         $stmt = $this->conn->prepare('SELECT id FROM users WHERE (username = :username or email = :username) and password = :password');
         $stmt->execute(array("username" => $userName, "password" => $password));
         $user = $stmt->fetch(PDO::FETCH_LAZY);
@@ -60,5 +50,12 @@ class User extends Db
         } else {
             return false;
         }
+    }
+
+
+
+    public function __construct()
+    {
+        echo "Модель Account работает";
     }
 }

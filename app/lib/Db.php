@@ -1,28 +1,25 @@
 <?php
-class DB
+namespace app\lib;
+use PDO;
+
+class Db
 {
-    protected $conn = null;
-    private $host = HOST;
-    private $dbname = DBNAME;
-    private $user = USER;
-    private $password = PASSWORD;
+    protected $conn;
     private $error;
 
     public function __construct()
     {
-        $dsn = "mysql:host=".$this->host.";dbname=".$this->dbname.";charset=utf8";
-        try {
-            $this->conn = new PDO($dsn, $this->user, $this->password);
-        } catch (PDOException $e) {
-            $this->conn = null;
-            $this->error = $e->getMessage();
-        }
+        $config = require 'config/db.php';
+        $this->conn = new PDO('mysql:host='.$config['host'].';dbname='.$config['dbname'], $config['user'], $config['password']);
+
     }
 
     public function getError()
     {
         return $this->_error;
     }
+
+
     public function getMaxLegth($table, $column)
     {
         $stmt = $this->conn->prepare("SELECT COLUMN_NAME, CHARACTER_MAXIMUM_LENGTH 

@@ -1,10 +1,6 @@
 <?php
-namespace app\models;
-use app\lib\Db;
-use PDO;
 
-
-class User extends Db
+class User extends DB
 {
     public $id;
     public $userName;
@@ -43,7 +39,6 @@ class User extends Db
     }
     public function checkLogin($userName, $password)
     {
-        //var_dump($userName, $password);die();
         $stmt = $this->conn->prepare('SELECT id FROM users WHERE (username = :username or email = :username) and password = :password');
         $stmt->execute(array("username" => $userName, "password" => $password));
         $user = $stmt->fetch(PDO::FETCH_LAZY);

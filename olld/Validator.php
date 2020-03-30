@@ -1,6 +1,4 @@
 <?php
-namespace app\models;
-
 class Validator
 {
     private $db;

@@ -3,7 +3,7 @@
     <div>
         <form method="POST">
             <div style="color: red;">
-                <?php foreach ($errors as $error) :?>
+               <?php foreach ($errors as $error) :?>
                     <p><?php echo $error;?></p>
                 <?php endforeach; ?>
             </div>
