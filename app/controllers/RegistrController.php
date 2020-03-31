@@ -1,6 +1,5 @@
 <?php
 namespace app\controllers;
-
 use app\core\Controller;
 use app\lib\Db;
 use app\models\Validator;
@@ -10,12 +9,10 @@ class RegistrController extends Controller
 {
     public function registrationAction()
     {
-
-
-        if (!empty($_SESSION['user_id'])) {
+        if (!empty($_SESSION['user_id'])){
         }
         $errors = [];
-        if (!empty($_POST)){
+        if (!empty($_POST)) {
             $validator = new Validator(new Db());
             foreach ($_POST as $k => $v) {
                 $validator->checkEmpty($k, $v);
@@ -26,7 +23,6 @@ class RegistrController extends Controller
             $validator->checkMinLength('password', $_POST['password'], 6);
             $validator->checkMatch('password', $_POST['password'], 'confirm_password', $_POST['confirm_password']);
             $errors = $validator->errors;
-
             if (empty($errors)) {
                 $user = new User;
                 $user->userName = $_POST['user_name'];
@@ -40,11 +36,9 @@ class RegistrController extends Controller
                 $user->save();
                 header("location: /login");
                 exit;
-
             }
-
-
         }
-        $this->view->render('Страница регистрации', ['errors'=> $errors]);
+        $this->view->render('Страница регистрации', ['errors'=>$errors]);
     }
 }
+?>

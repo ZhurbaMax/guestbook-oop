@@ -1,9 +1,10 @@
+<?php ?>
 <div class="body-content container mlogin">
     <h1>Регистрация</h1>
     <div>
         <form method="POST">
             <div style="color: red;">
-                <?php if(!empty($vars['errors'])):?>
+                <?php if (!empty($vars['errors'])) :?>
                     <?php foreach ($vars['errors'] as $error) :?>
                         <p><?php echo $error;?></p>
                     <?php endforeach; ?>
@@ -89,5 +90,3 @@
         </form>
     </div>
 </div>
-
-

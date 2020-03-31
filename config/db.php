@@ -5,3 +5,4 @@ return[
     'password' => '',
     'dbname' => 'userlistdb',
 ];
+?>

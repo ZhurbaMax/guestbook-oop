@@ -1,5 +1,4 @@
 <?php
-
 return[
     'registration' => [
         'controller' => 'registr',
@@ -14,4 +13,4 @@ return[
         'action'=>'index'
     ],
 ];
-
+?>

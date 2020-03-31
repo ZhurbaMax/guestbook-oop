@@ -1,6 +1,5 @@
 <?php
 namespace app\controllers;
-
 use app\core\Controller;
 use app\models\User;
 
@@ -8,12 +7,8 @@ class AccountController extends Controller
 {
     public function loginAction()
     {
-
-
         if (!empty($_SESSION['user_id'])) {
         }
-
-
         $errors = [];
         if (!empty($_POST)) {
             if (empty($_POST['user_name'])) {
@@ -33,10 +28,8 @@ class AccountController extends Controller
                     $errors[] = 'Пожалуйста, введите действительные учетные данные';
                 }
             }
-
         }
-        $this->view->render('Страница Входа', ['errors'=> $errors]);
-
+        $this->view->render('Страница Входа', ['errors'=>$errors]);
     }
-
 }
+?>

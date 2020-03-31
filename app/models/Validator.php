@@ -5,7 +5,6 @@ class Validator
 {
     private $db;
     public $errors = [];
-
     public function __construct($db)
     {
         $this->db = $db;
