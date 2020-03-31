@@ -1,5 +1,6 @@
 <?php
 namespace app\lib;
+
 use PDO;
 
 class Db

@@ -1,5 +1,6 @@
 <?php
 namespace app\controllers;
+
 use app\core\Controller;
 use app\lib\Db;
 use app\models\Validator;

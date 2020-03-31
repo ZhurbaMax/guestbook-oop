@@ -1,5 +1,6 @@
 <?php
 namespace app\models;
+
 use app\lib\Db;
 use PDO;
 
@@ -19,7 +20,7 @@ class Comment extends Db
     }
     public function findAll()
     {
-        $stmt = $this->conn->prepare("SELECT comments.*,users.username FROM comments LEFT JOIN users ON  users.id = comments.user_id ORDER BY id DESC ");
+        $stmt = $this->conn->prepare("SELECT comments.*, users.username FROM comments LEFT JOIN users ON  users.id = comments.user_id ORDER BY id DESC ");
         $stmt->execute();
         $comments = [];
         while ($row = $stmt->fetch(PDO::FETCH_LAZY)) {
