@@ -40,6 +40,7 @@ class RegistrController extends Controller
                 $user->save();
                 header("location: /login");
                 exit;
+
             }
 
 

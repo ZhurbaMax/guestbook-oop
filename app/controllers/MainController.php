@@ -19,6 +19,7 @@ class MainController extends Controller
             $comment->comment = $_POST['comment'];
             $comment->userId = $_SESSION['user_id'];
             $comment->save();
+
         }
         $comments = $comment->findAll();
 

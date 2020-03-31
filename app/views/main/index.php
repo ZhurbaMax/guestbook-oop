@@ -27,6 +27,7 @@
             <input type="submit" name="submit" value="Ответить">
         </li>
     </ul>-->
+
     <?php if (!empty($vars['comments'])):?>
     <?php foreach ($vars['comments'] as $comment) : ?>
 
