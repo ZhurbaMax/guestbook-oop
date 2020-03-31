@@ -23,7 +23,7 @@ class MainController extends Controller
         $comments = $comment->findAll();
 
 
-        $this->view->render('Страница камментариев');
+        $this->view->render('Страница камментариев', ['comments'=>$comments, 'title'=>'Страница камментариев']);
     }
 }
 

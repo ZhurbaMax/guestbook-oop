@@ -3,9 +3,11 @@
     <div>
         <form method="POST">
             <div style="color: red;">
-               <?php foreach ($errors as $error) :?>
-                    <p><?php echo $error;?></p>
-                <?php endforeach; ?>
+                <?php if(!empty($vars['errors'])):?>
+                    <?php foreach ($vars['errors'] as $error) :?>
+                        <p><?php echo $error;?></p>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
             <div>
                 <label>Логин:</label>

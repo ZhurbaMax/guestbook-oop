@@ -1,6 +1,6 @@
 
 <div id="comments-header">
-    <h1>Страница комментариев</h1>
+    <h1><?php echo $vars['title'];?></h1>
 </div>
 <div id="comments-form">
     <h3>Пожалуйста оставте свой коментарий</h3>
@@ -27,7 +27,8 @@
             <input type="submit" name="submit" value="Ответить">
         </li>
     </ul>-->
-    <?php foreach ($comments as $comment) : ?>
+    <?php if (!empty($vars['comments'])):?>
+    <?php foreach ($vars['comments'] as $comment) : ?>
 
         <p <?php if ($comment['user_id'] == $_SESSION['user_id']) {
             echo 'style="font-weight: bold;"';
@@ -42,6 +43,9 @@
         </form>
         <input type="button" value="Ответить" onclick="disp(document.getElementById('form1'))" />
     <?php endforeach;?>
+    <?php else: ?>
+    <h2>No comments</h2>
+    <?php endif;?>
 </div>
 
 
