@@ -28,4 +28,3 @@ class Comment extends Db
         return $comments;
     }
 }
-?>

@@ -32,4 +32,3 @@ class AccountController extends Controller
         $this->view->render('Страница Входа', ['errors'=>$errors]);
     }
 }
-?>

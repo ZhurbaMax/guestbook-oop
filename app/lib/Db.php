@@ -26,4 +26,3 @@ class Db
         return $column['CHARACTER_MAXIMUM_LENGTH'];
     }
 }
-?>

@@ -1,4 +1,3 @@
-<?php ?>
 <div class="body-content container mlogin">
     <h1>Регистрация</h1>
     <div>

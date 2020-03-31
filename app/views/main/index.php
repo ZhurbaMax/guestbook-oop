@@ -1,4 +1,3 @@
-<?php ?>
 <div id="comments-header">
     <h1><?php echo $vars['title'];?></h1>
 </div>
@@ -46,6 +45,3 @@
                 <h2>No comments</h2>
     <?php endif;?>
 </div>
-
-
-

@@ -58,4 +58,3 @@ class User extends Db
         }
     }
 }
-?>

@@ -41,4 +41,3 @@ class RegistrController extends Controller
         $this->view->render('Страница регистрации', ['errors'=>$errors]);
     }
 }
-?>

@@ -20,4 +20,3 @@ class MainController extends Controller
         $this->view->render('Страница камментариев', ['comments'=>$comments, 'title'=>'Страница камментариев']);
     }
 }
-?>
