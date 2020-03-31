@@ -8,8 +8,6 @@ class AccountController extends Controller
 {
     public function loginAction()
     {
-        if (!empty($_SESSION['user_id'])) {
-        }
         $errors = [];
         if (!empty($_POST)) {
             if (empty($_POST['user_name'])) {

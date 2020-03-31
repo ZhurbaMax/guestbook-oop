@@ -10,8 +10,6 @@ class RegistrController extends Controller
 {
     public function registrationAction()
     {
-        if (!empty($_SESSION['user_id'])){
-        }
         $errors = [];
         if (!empty($_POST)) {
             $validator = new Validator(new Db());
